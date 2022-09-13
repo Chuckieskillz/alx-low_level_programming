@@ -1,8 +1,10 @@
+#include <unistd.h>
 #include "main.h"
+
 /**
- *main - Entry point
+ * main- Entry point
  *
- *Return: nothing, return void
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -15,6 +17,5 @@ int main(void)
 	_putchar('a');
 	_putchar('r');
 	_putchar('\n');
-
-	return(0);
+	return (0);
 }
