@@ -1,26 +1,26 @@
-include <stdio.h>
+#include "stdio.h"
+#include "main.h"
+
 /**
- * main - main function
- *
- * Return: nothing
+ * main - fibonacci sequence
+ * description - prints a sequence
+ * Return: void, Always (success)
  */
 int main(void)
 {
-	int counter = 0;
-	long int a = 1;
-	long int b = a;
-	long int c = a + b;
-
-	while (c < 4000000)
-	{
-		if (c % 2 == 0)
-		{
-			counter += c;
-		}
-		a = b;
-		b = c;
-		c = a + b;
-	}
-	printf("%d\n", counter);
-	return (0);
+long int n1, n2, fn, afn;
+n1 = 1;
+n2 = 2;
+fn = afn = 0;
+while (fn <= 4000000)
+{
+fn = n1 + n2;
+n1 = n2;
+if ((n1 % 2) == 0)
+{
+afn += n1;
+}
+}
+printf("%ld\n", afn);
+return (0);
 }
